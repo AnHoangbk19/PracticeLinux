@@ -1,0 +1,22 @@
+$primary-color: coral;
+$text-color: #2a2a2a;
+$text-gray: #c6cad7;
+
+.four-0-four-msg{
+    text-align: center ;
+    text-transform: capitalize;
+    color: black;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    a{
+        color: $primary-color;
+    }
+    margin-bottom: 2rem;
+}
+
+body{
+    background-color: $primary-color;
+}
+
+  

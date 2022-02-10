@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500;700&display=swap');
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    height: 50px;
+    position: fixed;
+    top: 0;
+    padding: 0 36px;
+}
+.header__back {
+    display: flex;
+    align-items: center;    
+    font-size: 1.6rem;
+}
+.header__back-btn {
+    border: none;
+    padding: 8px 16px;
+    margin-right: 12px;
+    background-color: rgb(25, 13, 94);
+    color: #fff;
+    border-radius: 10px;
+}
+.header__back span {
+    font-weight: 600;
+}
+.header__back-btn:hover {
+    filter:  brightness(70%);
+}
+.header__title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Start Payment */
+.payment {
+    background-color: #ff7f50;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.payment__wrapper {
+    margin: auto;
+    width: 400px;
+}
+.payment__wrap {
+    background-color: #fff;
+    padding: 32px 26px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+.payment__wrap:first-child {
+    margin-bottom: 14px;    
+}
+.payment__wrap h4 {
+    font-size: 2.2rem;
+}
+.payment__methods-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.payment__methods-item:not(.payment__methods-item:last-child) {
+    padding: 12px 0;
+}
+.payment__methods-item:last-child {
+    padding-top: 8px;
+}
+.payment__methods-item label {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.payment__method-img {
+    margin-left: 2px;
+    margin-right: 8px;
+}
+.payment__method-name {
+    flex: 1;
+}
+.payment__methods-item:not(.payment__methods-item:last-child) {
+    border-bottom: 1px dotted #eceaea;
+}
+.payment__overview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.payment__btn {
+    width: 100%;
+    background-color: #ff7f50;
+    border: none;
+    height: 40px;
+    color: #fff;
+}
+.payment__btn:hover {
+    background-color: #f76d3b;
+}
+
+/* --ATM options--- */
+.atm-options {
+    display: none;
+}
+.atm-options.actived {
+    display: flex;
+    flex-direction: column;
+}
+.atm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.atm-header-icon {
+    padding: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.atm-header-icon:hover {
+    opacity: 0.6;
+}
+.atm-wrap {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    justify-content: center;
+}
+.atm-img-wrap {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgb(204, 204, 204);
+    padding: 2px;
+    margin: 3px;
+}
+.atm-img-wrap.actived {
+    border: 1px solid #ff7f50;
+    position: relative;
+}
+.atm-img-wrap.actived span {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ff7f50;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.atm-wrap img { 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Credit/Debit Card */
+.credit-debit-card {
+    display: none;
+}
+.credit-debit-card.actived {
+    display: flex;
+    flex-direction: column;
+}
+.card-info,
+.card-info-wrap {
+    display: flex;
+    flex-direction: column;
+}
+.card-info-wrap {
+    margin-bottom: 10px;
+}
+.card-info-wrap label {
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+.card-info-wrap input {
+    border: 1px solid #ccc;
+    padding: 8px 4px;
+    font-size: 1.3rem;
+    outline: none;
+    margin-bottom: 4px;
+}
+.card-btn {
+    height: 40px;
+    background-color: #ff7f50;
+}
+.card-btn:hover {
+    background-color: #ff6e39;
+}
+.card-msg {
+    font-size: 1.2rem;
+}
+.card-info-wrap.invalid input {
+    border-color: #f33a58;
+}
+.card-info-wrap.invalid .card-msg {
+    color: #f33a58;
+}
+
+@media screen and (max-width: 739px) {
+    .header {
+        padding: 0 12px;
+    }
+    .payment__wrapper {
+        width: 90%;
+    }
+}

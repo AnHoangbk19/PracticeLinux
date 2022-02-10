@@ -1,0 +1,35 @@
+.modal{
+    font-size:small;
+    text-align: left;
+    font-weight: 500;
+}
+.close-btn {
+    background: #d73e4d;
+    background: rgba(215, 62, 77, 0.75);
+    border: 0 none !important;
+    color: #fff7cc;
+    display: inline-block;
+    font-size: 34px;
+    height: 40px;
+    line-height: 1;
+    margin: 0px 1px;
+    opacity: 1;
+    text-align: center;
+    text-shadow: none;
+    -webkit-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+    vertical-align: top;
+    width: 46px;
+}
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
+
+.modal .btn-danger {
+    font-size: medium;
+}
+
+.header-text {
+    width: 280px;
+}

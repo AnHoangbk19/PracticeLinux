@@ -1,0 +1,171 @@
+#fbanner{
+    background-color: coral;
+    height: 100%;
+    padding: 20px auto;
+}
+
+.btn-group{
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+#flexiselDemo3 .card {
+    background-color: floralwhite;
+    padding: 0px 10px 10px;
+    margin: 10px 5px 40px;
+}
+
+#flexiselDemo3 .card:hover {
+    background-color: coral;
+}
+
+#flexiselDemo3 .card-body {
+    font-size: 1.5em;
+    font-family: 'Noto Serif';
+    color: black;
+
+}
+
+
+.album .card {
+    background-color: floralwhite;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    transition: all 0.5s;
+}
+
+.card-text{
+    font-family: 'Noto Serif';
+    color: black;
+    font-size: 2em;
+}
+
+
+
+.album .card:hover {
+    background-color: coral;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.price-text {
+    color: crimson;
+    font-size: 1.5em;
+}
+
+
+.title {
+    margin-bottom: 5vh
+}
+
+
+.cart {
+    background-color: white;
+    padding: 2vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem
+}
+
+/*Shopping Cart*/
+.summary {
+    background-color: lightgray;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65)
+}
+
+.summary .col-2 {
+    padding: 0
+}
+
+.summary .col-10 {
+    padding: 0
+}
+
+.cart-section .row {
+    margin: 0
+}
+
+.title b {
+    font-size: 1.5rem
+}
+
+.cart-section .main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%
+}
+
+.cart-section .col-2, .col {
+    padding: 0 1vh
+}
+
+.cart-section a {
+    padding: 0 1vh
+}
+
+.cart-section .close {
+    margin-left: auto;
+    font-size: 0.7rem
+}
+
+.cart-section h5 {
+    margin-top: 4vh
+}
+
+.btn-purchase {
+    background-color: crimson;
+    border:  none;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0
+}
+
+.btn-purchase:focus {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+}
+
+.btn-purchase:hover {
+    color: white
+}
+
+
+
+form {
+    display:flex;
+    flex-direction:row;
+    padding:2px;
+}
+
+input {
+    flex-grow:2;
+    border:none;
+}
+
+form button {
+    border: none;
+    color: white;
+    background-color: crimson;
+}
+
+h2.text-center {
+  font-size: 3.5rem;
+  font-family: 'Noto Serif';
+  font-weight: 600;
+  color: firebrick;
+}

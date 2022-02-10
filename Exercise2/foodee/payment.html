@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/index/index.css">
+    <link rel="stylesheet" href="./css/payment.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__back">
+            <button class="header__back-btn"><i class="fa fa-chevron-left"></i></button>
+            <span>Trở về</span>
+        </div>
+        <h3 class="header__title">Thanh toán</h3>
+        <a href="index.html" class="logo">
+            <span class="logo__text">Food</span>ee
+        </a>
+    </header>
+
+    <div class="payment">
+        <div class="payment__wrapper">
+            <div class="payment__wrap">
+                <div class="payment__methods-lists">
+                    <h4>Chọn phương thức thanh toán</h4>
+                    <div class="payment__methods-item">
+                        <input type="radio" name="payment__methods" id="cash">
+                        <label for="cash">
+                            <img src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-cod.svg" class="payment__method-img" alt="">
+                            <span class="payment__method-name">Thanh toán tiền mặt</span>    
+                        </label>
+                    </div>
+                    <div class="payment__methods-item">
+                        <input type="radio" name="payment__methods" id="momo">
+                        <label for="momo">
+                            <img src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-mo-mo.svg" class="payment__method-img" alt="">
+                            <div class="payment__method-name">Ví Momo</div>
+                        </label>
+                    </div>
+                    <div class="payment__methods-item">
+                        <input type="radio" name="payment__methods" id="zalopay">
+                        <label for="zalopay">
+                            <img src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-zalo-pay.svg" class="payment__method-img" alt="">
+                            <div class="payment__method-name">Ví ZaloPay</div>
+                            
+                        </label>
+                    </div>
+                    <div class="payment__methods-item">
+                        <input type="radio" name="payment__methods" id="atm">
+                        <label for="atm">
+                            <img src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-atm.svg" class="payment__method-img" alt="">
+                            <div class="payment__method-name">Thẻ ATM</div>
+                        </label> 
+                        
+                    </div>
+                    <div class="payment__methods-item">
+                        <input type="radio" name="payment__methods" id="credit-debit">
+                        <label for="credit-debit">
+                            <img src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-credit.svg" class="payment__method-img" alt="">
+                            <div class="payment__method-name">Thẻ tín dụng/Ghi nợ</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="atm-options">
+                    <div class="atm-header">
+                        <i class="atm-header-icon fa fa-chevron-left" onclick="backToPayment()"></i>
+                        <span>Chọn ngân hàng</span>
+                    </div>
+                    <span class="atm-msg"></span>
+                    <div class="atm-wrap">
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/ts/upload/c0/92/71/98b4ac5a2e4fbe9cee282d40c54579bd.png" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/assets/img/zalopaygw/VCB.jpg" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/ts/upload/b3/67/8d/2feb0c1f3f3ec9f38dd4d462883459be.png" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/assets/img/zalopaygw/BIDV.jpg" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/assets/img/zalopaygw/TPB.jpg" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/assets/img/zalopaygw/ACB.jpg" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/assets/img/zalopaygw/TCB.jpg" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/assets/img/zalopaygw/SHB.jpg" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/assets/img/zalopaygw/VARB.jpg" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/assets/img/zalopaygw/KLB.jpg" alt="">
+                        </div>
+                        <div class="atm-img-wrap">
+                            <img src="https://salt.tikicdn.com/assets/img/zalopaygw/NAB.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="credit-debit-card">
+                    <div class="atm-header">
+                        <i class="atm-header-icon fa fa-chevron-left" onclick="backToPayment()"></i>
+                        <span>Thêm thẻ tín dụng/Ghi nợ</span>
+                    </div>
+                    <form class="card-info">
+                        <div class="card-info-wrap">
+                            <label for="card-number">Số thẻ</label>
+                            <input type="text" id="card-number" placeholder="Nhập số in trên thẻ">
+                            <span class="card-msg"></span>
+                        </div>
+                        <div class="card-info-wrap">
+                            <label for="card-name">Tên chủ thẻ</label>
+                            <input type="text" id="card-name" placeholder="Nhập tên in trên thẻ">
+                            <span class="card-msg"></span>
+                        </div>
+                        <div class="card-info-wrap">
+                            <label for="card-date">Ngày hết hạn</label>
+                            <input type="text" id="card-date" placeholder="Nhập ngày hết hạn">
+                            <span class="card-msg"></span>
+                        </div>
+                        <div class="card-info-wrap">
+                            <label for="card-cvv">CVV</label>
+                            <input type="text" id="card-cvv" placeholder="Nhập mã CVV">
+                            <span class="card-msg"></span>
+                        </div>
+                        <button class="card-btn">Thêm thẻ</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="payment__wrap">
+                <div class="payment__overview">
+                    <span>Thành tiền</span>
+                    <span class="payment__total-price"></span>
+                </div>
+                <button class="payment__btn">Đặt món</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/payment.js"></script>
+    <script src="./js/validator.js"></script>
+    <script>
+        Validator({
+            form: '.card-info',
+            errorSelector: '.card-msg',
+            rules: [
+                Validator.isRequired('#card-number', 'Vui lòng nhập vào số thẻ'),
+                Validator.isNumber('#card-number'),
+                Validator.isRequired('#card-name', 'Vui lòng nhập vào tên trên thẻ'),
+                Validator.isRequired('#card-date', 'Vui lòng nhập vào ngày hết hạn'),
+                Validator.isNumber('#card-date'),
+                Validator.isRequired('#card-cvv', 'Vui lòng nhập vào CVV'),
+                Validator.isNumber('#card-cvv'),
+            ]
+        })
+    </script>
+</body>
+</html>

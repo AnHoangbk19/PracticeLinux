@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Foodee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Noto Serif' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index/index.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+
+<body>
+    <div class="alert-box">
+        <img src="images/error.png" class="alert-img" alt="">
+        <p class="alert-msg">Error message</p>
+    </div>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__text">Food</span>ee
+            </a>
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="index.html" class="header__menu-link">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#specialfood" class="header__menu-link">
+                            Món đặc biệt
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#menu" class="header__menu-link">
+                            Thực đơn
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#contact" class="header__menu-link">
+                            Liên hệ
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">
+                            Thông tin
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <div id="menu-btn" class="fa fa-bars"></div>
+                <div id="search-btn" class="fa fa-search"></div>
+                <div id="cart-btn" class="fa fa-shopping-cart" onclick="openCart()"></div>
+                <div id="login-btn" class="fa fa-user"></div>
+            </div>
+            <form action="" class="search-form">
+                <input type="search" placeholder="Tìm kiếm..." id="search-box">
+                <label for="search-box" class="fa fa-search"></label>
+            </form>
+            <a class="login-form">
+                <div class="login-logout-popup">
+                    <p class="account-info">Log in as, name</p>
+                    <button class="header__menu-link btn btn--border btn--rounded" id="user-btn">Log out </button>
+                </div>
+            </a>
+        </div>
+    </header>
+    <div id="fbanner" class="mb-5">
+        <div class="col-xxl-8 px-4 py-2 container">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-center">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="images/theme1.png" class="d-block mx-lg-auto img-fluid" alt="Themes" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6" style="color: ghostwhite;">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">L01_NHÓM 6 RESTAURANT</h1>
+                    <p class="lead fs-3" style="text-align: justify;">Chúng tôi là L01_Nhóm 6 Restaurant với hơn 100 cửa hàng trên khắp cả nước, chúng tôi mong muốn đem đến niềm vui ẩm thực cho mọi gia đình Việt bằng những món ăn có chất lượng tốt, hương vị tuyệt hảo, dịch vụ chu đáo với một mức giá hợp lý… Hãy đến và thưởng thức nhé!</p>
+                    <button type="button" class="btn btn-danger btn-lg px-4 me-md-2">ĐẶT NGAY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-center" id="specialfood">Món đặc biệt</h2>
+    <!-- Special slider -->
+    <ul id="flexiselDemo3">
+        <li>
+            <div class="card">
+                <a href="#"><img class="card-img-top" src="images/slide_1.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body">
+                    <p>Gỏi bò bóp thấu </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card">
+                <a href="#"><img class="card-img-top" src="images/slide_2.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body">
+                    <p> Sườn sốt mật ong </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card">
+                <a href="#"><img class="card-img-top" src="images/slide_3.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body">
+                    <p> Khoai tây chiên sốt mật </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card">
+                <a href="#"><img class="card-img-top" src="images/res_img_1.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body">
+                    <p> Salad rau trộn </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h2 class="text-center">Thực đơn</h2>
+    <div class="container text-center my-4">
+        <div class="btn-group-md">
+            <a href="#" class="filter-btn btn btn-danger fs-5 py-1" data-filter="all" aria-current="page">Tất cả</a>
+            <a href="#" class="filter-btn btn btn-danger fs-5 py-1" data-filter="meat">Món Thịt</a>
+            <a href="#" class="filter-btn btn btn-danger fs-5 py-1" data-filter="vege">Món Rau</a>
+            <a href="#" class="filter-btn btn btn-danger fs-5 py-1" data-filter="dess">Tráng Miệng</a>
+        </div>
+    </div>
+    <!-- Products -->
+    <div class="album py-3 bg-light" id="menu">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col product vege">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="images/res_img_1.jpg" alt="Card image" style="width:100%"></a>
+                        <div class="modal" id="Modal4" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">THÊM VÀO GIỎ HÀNG</h5>
+                                        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="food-img" src="images/res_img_1.jpg" />
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="row py-3 header-text">
+                                                        <div class="col">
+                                                            <p><big><b>SKU</b></big></p>
+                                                            <P>452</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Salad</b></big></p>
+                                                            <p class="food-name">Salad rau trộn</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Giá</b></big></p>
+                                                            <p class="food-price">$20.99</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-number-input h-10 w-32">
+                                                        <div class="in-modal-quantity">
+                                                            <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold"><b>Số lượng</b></label>
+                                                            <div class="cart__item-control">
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="decrement(this)">-</button>
+                                                                </div>
+                                                                <span class="cart-quantity">1</span>
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="increment(this)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <p><b>Nguyên liệu:</b> <i>What is Lorem Ipsum?</i></p>
+                                                        <p><b>Phụ gia:</b> <i>03</i></p>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <P><big><b>Món ăn kèm (*)</b></big></p>
+                                                            </div>
+                                                        </div>
+                                                        <p><i>Please select one of the properties below</i></p>
+                                                        <input type="checkbox" id="vegetable" name="vegetable" value="Vegetable">
+                                                        <label for="vegetable"><b>Vegetables</b></label><br>
+                                                        <br>
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-danger btn-item-add" type="button" data-dismiss="modal">$20.99</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Salad rau trộn</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="price-text">$20.99</p>
+                                <button type="button" class="btn btn-lg btn-danger" data-target="#Modal4" data-toggle="modal">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product meat">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="images/res_img_2.jpg" alt="Card image" style="width:100%"></a>
+                        <div class="modal" id="Modal5" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">THÊM VÀO GIỎ HÀNG</h5>
+                                        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="food-img" src="images/res_img_2.jpg" />
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="row py-3 header-text">
+                                                        <div class="col">
+                                                            <p><big><b>SKU</b></big></p>
+                                                            <P>452</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Sườn</b></big></p>
+                                                            <p class="food-name">Sườn hầm tỏi</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Giá</b></big></p>
+                                                            <p class="food-price">$20.99</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-number-input h-10 w-32">
+                                                        <div class="in-modal-quantity">
+                                                            <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold"><b>Số lượng</b></label>
+                                                            <div class="cart__item-control">
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="decrement(this)">-</button>
+                                                                </div>
+                                                                <span class="cart-quantity">1</span>
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="increment(this)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <p><b>Nguyên liệu:</b> <i>What is Lorem Ipsum?</i></p>
+                                                        <p><b>Phụ gia:</b> <i>03</i></p>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <P><big><b>Món ăn kèm (*)</b></big></p>
+                                                            </div>
+                                                        </div>
+                                                        <p><i>Please select one of the properties below</i></p>
+                                                        <input type="checkbox" id="vegetable" name="vegetable" value="Vegetable">
+                                                        <label for="vegetable"><b>Vegetables</b></label><br>
+                                                        <br>
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-danger btn-item-add" type="button" data-dismiss="modal">$20.99</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Sườn hầm tỏi</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="price-text">$20.99</p>
+                                <button type="button" class="btn btn-lg btn-danger" data-target="#Modal5" data-toggle="modal">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product vege">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="images/res_img_3.jpg" alt="Card image" style="width:100%"></a>
+                        <div class="modal" id="Modal6" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">THÊM VÀO GIỎ HÀNG</h5>
+                                        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="food-img" src="images/res_img_3.jpg" />
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="row py-3 header-text">
+                                                        <div class="col">
+                                                            <p><big><b>SKU</b></big></p>
+                                                            <P>452</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Sandwich</b></big></p>
+                                                            <p class="food-name">Sandwich rau trộn</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Giá</b></big></p>
+                                                            <p class="food-price">$20.99</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-number-input h-10 w-32">
+                                                        <div class="in-modal-quantity">
+                                                            <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold"><b>Số lượng</b></label>
+                                                            <div class="cart__item-control">
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="decrement(this)">-</button>
+                                                                </div>
+                                                                <span class="cart-quantity">1</span>
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="increment(this)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <p><b>Nguyên liệu:</b> <i>What is Lorem Ipsum?</i></p>
+                                                        <p><b>Phụ gia:</b> <i>03</i></p>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <P><big><b>Món ăn kèm (*)</b></big></p>
+                                                            </div>
+                                                        </div>
+                                                        <p><i>Please select one of the properties below</i></p>
+                                                        <input type="checkbox" id="vegetable" name="vegetable" value="Vegetable">
+                                                        <label for="vegetable"><b>Vegetables</b></label><br>
+                                                        <br>
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-danger btn-item-add" type="button" data-dismiss="modal">$20.99</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Sandwich rau trộn</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="price-text">$20.99</p>
+                                <button type="button" class="btn btn-lg btn-danger" data-target="#Modal6" data-toggle="modal">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product dess">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="images/res_img_5.jpg" alt="Card image" style="width:100%"></a>
+                        <div class="modal" id="Modal7" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">THÊM VÀO GIỎ HÀNG</h5>
+                                        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="food-img" src="images/res_img_5.jpg" />
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="row py-3 header-text">
+                                                        <div class="col">
+                                                            <p><big><b>SKU</b></big></p>
+                                                            <P>452</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Đồ uống</b></big></p>
+                                                            <p class="food-name">Nước ép táo mèo</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Giá</b></big></p>
+                                                            <p class="food-price">$20.99</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-number-input h-10 w-32">
+                                                        <div class="in-modal-quantity">
+                                                            <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold"><b>Số lượng</b></label>
+                                                            <div class="cart__item-control">
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="decrement(this)">-</button>
+                                                                </div>
+                                                                <span class="cart-quantity">1</span>
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="increment(this)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <p><b>Nguyên liệu:</b> <i>What is Lorem Ipsum?</i></p>
+                                                        <p><b>Phụ gia:</b> <i>03</i></p>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <P><big><b>Món ăn kèm (*)</b></big></p>
+                                                            </div>
+                                                        </div>
+                                                        <p><i>Please select one of the properties below</i></p>
+                                                        <input type="checkbox" id="vegetable" name="vegetable" value="Vegetable">
+                                                        <label for="vegetable"><b>Vegetables</b></label><br>
+                                                        <br>
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-danger btn-item-add" type="button" data-dismiss="modal">$20.99</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Nước ép táo mèo</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="price-text">$20.99</p>
+                                <button type="button" class="btn btn-lg btn-danger" data-target="#Modal7" data-toggle="modal">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product dess">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="images/res_img_7.jpg" alt="Card image" style="width:100%"></a>
+                        <div class="modal" id="Modal9" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">THÊM VÀO GIỎ HÀNG</h5>
+                                        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="food-img" src="images/res_img_7.jpg" />
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="row py-3 header-text">
+                                                        <div class="col">
+                                                            <p><big><b>SKU</b></big></p>
+                                                            <P>452</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Đồ uống</b></big></p>
+                                                            <p class="food-name">Nước ép</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Giá</b></big></p>
+                                                            <p class="food-price">$20.99</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-number-input h-10 w-32">
+                                                        <div class="in-modal-quantity">
+                                                            <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold"><b>Số lượng</b></label>
+                                                            <div class="cart__item-control">
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="decrement(this)">-</button>
+                                                                </div>
+                                                                <span class="cart-quantity">1</span>
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="increment(this)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <p><b>Nguyên liệu:</b> <i>What is Lorem Ipsum?</i></p>
+                                                        <p><b>Phụ gia:</b> <i>03</i></p>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <P><big><b>Món ăn kèm (*)</b></big></p>
+                                                            </div>
+                                                        </div>
+                                                        <p><i>Please select one of the properties below</i></p>
+                                                        <input type="checkbox" id="vegetable" name="vegetable" value="Vegetable">
+                                                        <label for="vegetable"><b>Vegetables</b></label><br>
+                                                        <br>
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-danger btn-item-add" type="button" data-dismiss="modal">$20.99</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Nước ép</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="price-text">$20.99</p>
+                                <button type="button" class="btn btn-lg btn-danger" data-target="#Modal9" data-toggle="modal">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product meat">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="images/res_img_8.jpg" alt="Card image" style="width:100%"></a>
+                        <div class="modal" id="Modal8" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">THÊM VÀO GIỎ HÀNG</h5>
+                                        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="food-img" src="images/res_img_8.jpg" />
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="row py-3 header-text">
+                                                        <div class="col">
+                                                            <p><big><b>SKU</b></big></p>
+                                                            <P>452</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Thịt bò</b></big></p>
+                                                            <p class="food-name">Bò nướng áp chảo</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Giá</b></big></p>
+                                                            <p class="food-price">$20.99</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-number-input h-10 w-32">
+                                                        <div class="in-modal-quantity">
+                                                            <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold"><b>Số lượng</b></label>
+                                                            <div class="cart__item-control">
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="decrement(this)">-</button>
+                                                                </div>
+                                                                <span class="cart-quantity">1</span>
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="increment(this)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <p><b>Nguyên liệu:</b> <i>What is Lorem Ipsum?</i></p>
+                                                        <p><b>Phụ gia:</b> <i>03</i></p>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <P><big><b>Món ăn kèm (*)</b></big></p>
+                                                            </div>
+                                                        </div>
+                                                        <p><i>Please select one of the properties below</i></p>
+                                                        <input type="checkbox" id="vegetable" name="vegetable" value="Vegetable">
+                                                        <label for="vegetable"><b>Vegetables</b></label><br>
+                                                        <br>
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-danger btn-item-add" type="button" data-dismiss="modal">$20.99</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Bò nướng áp chảo</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="price-text">$20.99</p>
+                                <button type="button" class="btn btn-lg btn-danger" data-target="#Modal8" data-toggle="modal">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product vege">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="images/res_img_10.jpg" alt="Card image" style="width:100%"></a>
+                        <div class="modal" id="Modal10" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">THÊM VÀO GIỎ HÀNG</h5>
+                                        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="food-img" src="images/res_img_10.jpg" />
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="row py-3 header-text">
+                                                        <div class="col">
+                                                            <p><big><b>SKU</b></big></p>
+                                                            <P>452</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Salad</b></big></p>
+                                                            <p class="food-name">Salad trộn</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Giá</b></big></p>
+                                                            <p class="food-price">$20.99</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-number-input h-10 w-32">
+                                                        <div class="in-modal-quantity">
+                                                            <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold"><b>Số lượng</b></label>
+                                                            <div class="cart__item-control">
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="decrement(this)">-</button>
+                                                                </div>
+                                                                <span class="cart-quantity">1</span>
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="increment(this)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <p><b>Nguyên liệu:</b> <i>What is Lorem Ipsum?</i></p>
+                                                        <p><b>Phụ gia:</b> <i>03</i></p>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <P><big><b>Món ăn kèm (*)</b></big></p>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <p><i>Selected quantity 0</i></p>
+                                                            </div>
+                                                        </div>
+                                                        <p><i>Please select one of the properties below</i></p>
+                                                        <input type="checkbox" id="vegetable" name="vegetable" value="Vegetable">
+                                                        <label for="vegetable"><b>Vegetables</b></label><br>
+                                                        <br>
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-danger btn-item-add" type="button" data-dismiss="modal">$20.99</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Salad trộn</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="price-text">$20.99</p>
+                                <button type="button" class="btn btn-lg btn-danger" data-target="#Modal10" data-toggle="modal">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product dess">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="images/res_img_11.jpg" alt="Card image" style="width:100%"></a>
+                        <div class="modal" id="Modal11" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">THÊM VÀO GIỎ HÀNG</h5>
+                                        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="food-img" src="images/res_img_11.jpg" />
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="row py-3 header-text">
+                                                        <div class="col">
+                                                            <p><big><b>SKU</b></big></p>
+                                                            <P>452</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Bánh mì</b></big></p>
+                                                            <p class="food-name">Bánh mì sữa tỏi</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Giá</b></big></p>
+                                                            <p class="food-price">$20.99</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-number-input h-10 w-32">
+                                                        <div class="in-modal-quantity">
+                                                            <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold"><b>Số lượng</b></label>
+                                                            <div class="cart__item-control">
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="decrement(this)">-</button>
+                                                                </div>
+                                                                <span class="cart-quantity">1</span>
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="increment(this)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <p><b>Nguyên liệu:</b> <i>What is Lorem Ipsum?</i></p>
+                                                        <p><b>Phụ gia:</b> <i>03</i></p>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <P><big><b>Món ăn kèm (*)</b></big></p>
+                                                            </div>
+                                                        </div>
+                                                        <p><i>Please select one of the properties below</i></p>
+                                                        <input type="checkbox" id="vegetable" name="vegetable" value="Vegetable">
+                                                        <label for="vegetable"><b>Vegetables</b></label><br>
+                                                        <br>
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-danger btn-item-add" type="button" data-dismiss="modal">$20.99</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Bánh mì sữa tỏi</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="price-text">$20.99</p>
+                                <button type="button" class="btn btn-lg btn-danger" data-target="#Modal11" data-toggle="modal">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product vege">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="images/res_img_12.jpg" alt="Card image" style="width:100%"></a>
+                        <div class="modal" id="Modal15" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">THÊM VÀO GIỎ HÀNG</h5>
+                                        <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img class="food-img" src="images/res_img_12.jpg" />
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="row py-3 header-text">
+                                                        <div class="col">
+                                                            <p><big><b>SKU</b></big></p>
+                                                            <P>452</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Xôi</b></big></p>
+                                                            <p class="food-name">Xôi tím muối vừng</p>
+                                                        </div>
+                                                        <div class="col">
+                                                            <p><big><b>Giá</b></big></p>
+                                                            <p class="food-price">$20.99</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-number-input h-10 w-32">
+                                                        <div class="in-modal-quantity">
+                                                            <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold"><b>Số lượng</b></label>
+                                                            <div class="cart__item-control">
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="decrement(this)">-</button>
+                                                                </div>
+                                                                <span class="cart-quantity">1</span>
+                                                                <div class="cart__item-control-wrap mx-1">
+                                                                    <button class="btn-quantity" onclick="increment(this)">+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <p><b>Nguyên liệu:</b> <i>What is Lorem Ipsum?</i></p>
+                                                        <p><b>Phụ gia:</b> <i>03</i></p>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <P><big><b>Món ăn kèm (*)</b></big></p>
+                                                            </div>
+                                                        </div>
+                                                        <p><i>Please select one of the properties below</i></p>
+                                                        <input type="checkbox" id="vegetable" name="vegetable" value="Vegetable">
+                                                        <label for="vegetable"><b>Vegetables</b></label><br>
+                                                        <br>
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-danger btn-item-add" type="button" data-dismiss="modal">$20.99</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Xôi tím muối vừng</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="price-text">$20.99</p>
+                                <button type="button" class="btn btn-lg btn-danger" data-target="#Modal15" data-toggle="modal">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Products -->
+    <!-- Shopping cart -->
+    <div class="cart__section">
+        <div class="order-bar" onclick="openCart()">
+            <i class="cart__bar-icon fa fa-shopping-cart"></i>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <div class="cart__wrapper">
+            <div class="cart__header">
+                <h2>Giỏ hàng</h2>
+                <i class="cart__close-btn fa fa-chevron-down" onclick="closeCart()"></i>
+            </div>
+            <ul class="cart__list">
+            </ul>
+            <div class="cart__overview">
+                <div class="cart__promo-code">
+                    <input type="text" placeholder="Mã khuyến mãi" class="cart__promo-typing">
+                    <button class="cart__promo-apply">Áp dụng</button>
+                </div>
+                <div class="cart__final-price">
+                    <span>Tổng cộng</span>
+                    <span class="cart-total-price">$0</span>
+                </div>
+            </div>
+            <button class="cart__payment">Thanh toán</button>
+        </div>
+    </div>
+    <!-- End Shopping cart -->
+    <!-- footer-->
+    <footer class="footer" id="contact">
+        <div class="container footer__container d-flex flex-wrap px-2">
+            <div class="footer__item">
+                <a href="index.html" class="logo">
+                    <span class="logo__text">Foodee</span>
+                </a>
+                <p class="footer__link">Luôn quan tâm, phục vụ khách hàng kể từ lúc thành lập.</p>
+            </div>
+            <div class="footer__item">
+                <a href="#" class="footer__link"><i class="fa fa-phone"></i>+123-456-7890</a>
+                <a href="#" class="footer__link"><i class="fa fa-phone"></i>+123-222-3333</a>
+                <a href="#" class="footer__link"><i class="fa fa-envelope"></i>res@gmail.com</a>
+                <a href="#" class="footer__link"><i class="fa fa-map"></i>aaaaaa</a>
+            </div>
+            <div class="footer__item">
+                <a href="#" class="footer__link"><i class="fa fa-arrow-right"></i>Trang chủ</a>
+                <a href="#" class="footer__link"><i class="fa fa-arrow-right"></i>Khuyến mãi</a>
+                <a href="#" class="footer__link"><i class="fa fa-arrow-right"></i>Blogs</a>
+                <a href="#" class="footer__link"><i class="fa fa-arrow-right"></i>Phản hồi từ khách hàng</a>
+            </div>
+            <div class="footer__item">
+                <a href="#" class="footer__link">Chính sách bảo mật thông tin</a>
+                <a href="#" class="footer__link">Chính sách hoạt động</a>
+                <a href="#" class="footer__link">Chính sách và quy định chung</a>
+                <a href="#" class="footer__link">Liên hệ</a>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer-->
+    <script>
+    function decrement(buttonClicked) {
+        var quantityControl = buttonClicked.parentElement.parentElement
+        var quantity = quantityControl.getElementsByClassName('cart-quantity')[0].innerText
+        if (quantity > 1) {
+            quantityControl.getElementsByClassName('cart-quantity')[0].innerText -= 1
+        }
+        updatePrice(buttonClicked)
+    }
+
+    function increment(buttonClicked) {
+        var quantityControl = buttonClicked.parentElement.parentElement
+        var quantity = quantityControl.getElementsByClassName('cart-quantity')[0].innerText
+        quantityControl.getElementsByClassName('cart-quantity')[0].innerText = parseInt(quantity) + 1
+        updatePrice(buttonClicked)
+    }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/index/index.js"></script>
+    <script src="./js/cart.js"></script>
+    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+    <!-- slider control -->
+    <script type="text/javascript">
+    $(window).on('load', function() {
+        $("#flexiselDemo3").flexisel({
+            visibleItems: 4,
+            itemsToScroll: 1,
+            autoPlay: {
+                enable: true,
+                interval: 3500,
+                pauseOnHover: true
+            }
+        });
+    });
+    </script>
+</body>

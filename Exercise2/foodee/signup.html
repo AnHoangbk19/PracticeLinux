@@ -1,0 +1,91 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./css/signup/signup.css" />
+    <title>BTL</title>
+</head>
+<body>
+
+    <img src="images/loader.gif" class="loader" alt="">
+
+    <div class="alert-box">
+        <img src="images/error.png" class="alert-img" alt="">
+        <p class="alert-msg">Error message</p>
+    </div>
+
+    <div class="container-signup">
+        <a href="index.html" class="logo_signup">
+            <span class="logo__text">Food</span>ee
+        </a>     
+    </div>
+    <div class="signup">
+      <span class="or">Or</span>
+      <div class="left">
+        <form action="#">
+          <div class="form-inner">
+            <div class="form-group">
+              <label for="">Name</label>
+              <input type="text" placeholder="Enter your name" autocomplete="off" id="name" />
+            </div>
+            <div class="form-group">
+              <label for="">Phone</label>
+              <input type="text" placeholder="Enter your phone" autocomplete="off" id="number" />
+            </div>
+            <div class="form-group">
+              <label for="">Email address</label>
+              <input type="email" placeholder="Enter your email" autocomplete="off" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input type="password" placeholder="Create your password" autocomplete="off" id="password" />
+            </div>
+          </div>
+          <p class="remember">
+            <input type="checkbox" /> <span>Remember me</span>
+          </p>
+          <p class="member"> Are you a member ? <a href="Login.html">Login now</a></p>
+          <button class="submit-btn">Create an account</button>
+        </form>
+      </div>
+      <div class="right">
+        <ul>
+          <li class="facebook">
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+              <span>Connect with facebook</span>
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+              <span>Connect with twitter</span>
+            </a>
+          </li>
+          <li class="google">
+            <a href="#">
+              <i class="fa fa-google"></i>
+              <span>Connect with google</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/token.js"></script>
+</body>
+</html>

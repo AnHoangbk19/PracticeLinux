@@ -1,0 +1,18 @@
+.four-0-four-msg {
+  text-align: center;
+  text-transform: capitalize;
+  color: black;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.four-0-four-msg a {
+  color: coral;
+}
+
+body {
+  background-color: coral;
+}
+
+/*# sourceMappingURL=404.css.map */
