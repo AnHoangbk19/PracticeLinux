@@ -1,0 +1,27 @@
+{
+  "name": "foodee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon sever.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ez9amE0812/CNPM_Restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ez9amE0812/CNPM_Restaurant/issues"
+  },
+  "homepage": "https://github.com/Ez9amE0812/CNPM_Restaurant#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1031.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express.js": "^1.0.0",
+    "firebase-admin": "^10.0.0",
+    "nodemon": "^2.0.14"
+  }
+}
